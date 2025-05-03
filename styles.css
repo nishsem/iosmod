@@ -78,6 +78,13 @@ body {
     margin-right: auto;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* Buttons */
 .cta-button {
     display: inline-block;
@@ -95,6 +102,11 @@ body {
     overflow: hidden;
 }
 
+.cta-button.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .cta-button::before {
     content: '';
     position: absolute;
@@ -109,6 +121,11 @@ body {
 
 .cta-button:hover::before {
     opacity: 1;
+}
+
+.cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .cta-button span {
@@ -343,6 +360,14 @@ footer {
 
     .price {
         font-size: 3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .cta-button {
+        width: 100%;
     }
 }
 

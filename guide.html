@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use the iOS Mod Kit</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Guide-specific styles */
+        .guide-section {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+        }
+
+        .faq-question {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+        }
+
+        .screenshot-placeholder {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            margin: 1rem 0;
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+
+        .back-button {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-button:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>How to Use the iOS Mod Kit</h1>
+            <p class="subtitle">Simple steps to get started with your iOS modding journey</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Step 1: Install Configuration Profile -->
+        <section class="guide-section">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h2>Install Configuration Profile</h2>
+                <p>Download and install the configuration profile to enable app installation on your device.</p>
+                <a href="#" class="download-button">
+                    <i class="fas fa-download"></i> Download .mobileconfig
+                </a>
+            </div>
+        </section>
+
+        <!-- Step 2: Trust the Certificate -->
+        <section class="guide-section">
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h2>Trust the Certificate</h2>
+                <p>After installing the profile, you need to trust the certificate:</p>
+                <ol>
+                    <li>Go to Settings > General</li>
+                    <li>Scroll down and tap on "VPN & Device Management"</li>
+                    <li>Find the certificate and tap "Trust"</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Step 3: Install eSign -->
+        <section class="guide-section">
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h2>Install eSign</h2>
+                <p>Download and install the eSign app to manage your IPA files.</p>
+                <a href="#" class="download-button">
+                    <i class="fas fa-download"></i> Download eSign.ipa
+                </a>
+            </div>
+        </section>
+
+        <!-- Step 4: Open eSign and Import IPA -->
+        <section class="guide-section">
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h2>Open eSign and Import IPA</h2>
+                <p>Follow these steps to install your apps:</p>
+                <ol>
+                    <li>Open the eSign app</li>
+                    <li>Tap the "+" button to import IPA files</li>
+                    <li>Select your IPA file from Files or Downloads</li>
+                    <li>Wait for the installation to complete</li>
+                </ol>
+                <div class="screenshot-placeholder">
+                    <i class="fas fa-image"></i> Screenshot placeholder
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="guide-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">Q: Do I need to jailbreak my device?</h3>
+                <p class="faq-answer">A: No, this method works without jailbreak. It uses Apple's enterprise certificate system.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Q: How long will the apps stay installed?</h3>
+                <p class="faq-answer">A: Apps will remain installed as long as the certificate is valid. We provide new certificates when needed.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Q: Is this method safe?</h3>
+                <p class="faq-answer">A: Yes, this method is safe as it uses official Apple systems. However, always download apps from trusted sources.</p>
+            </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <section class="guide-section">
+            <div class="navigation-buttons">
+                <a href="index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+                <a href="https://wa.me/60138343431" class="cta-button">
+                    <i class="fab fa-whatsapp"></i> Contact Me
+                </a>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="guide-section">
+            <div class="disclaimer-box">
+                <h3>Important Notice</h3>
+                <p>This guide is for educational purposes only. The methods described are unofficial and not endorsed by Apple. Use at your own risk.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">© 2025 Nish. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

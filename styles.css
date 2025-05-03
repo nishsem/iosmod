@@ -28,16 +28,13 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('assets/hero5.png') center/cover;
-    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    position: relative;
-    overflow: hidden;
 }
 
 .hero::before {
@@ -47,14 +44,32 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('assets/hero5.png') center/cover;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: -2;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: radial-gradient(circle at center, rgba(0, 122, 255, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
-    z-index: 1;
+    z-index: -1;
 }
 
 .hero-content {
     max-width: 800px;
     position: relative;
     z-index: 2;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .hero h1 {
@@ -341,7 +356,38 @@ footer {
 }
 
 /* Responsive Design */
+@media (min-width: 769px) {
+    .hero {
+        perspective: 1px;
+        transform-style: preserve-3d;
+    }
+
+    .hero::before {
+        transform: translateZ(-1px) scale(2);
+    }
+
+    .hero-content {
+        transform: translateZ(0);
+    }
+}
+
 @media (max-width: 768px) {
+    .hero::before {
+        background-attachment: scroll;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero {
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                    url('assets/hero5.png') center/cover;
+    }
+
+    .hero::before {
+        background: none;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }

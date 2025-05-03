@@ -29,7 +29,7 @@ body {
 .hero {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('assets/hero.jpg') center/cover;
+                url('assets/hero5.png') center/cover;
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;

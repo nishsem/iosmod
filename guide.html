@@ -90,6 +90,22 @@
         .back-button:hover {
             color: var(--primary-color);
         }
+
+        .note-box {
+            background: rgba(255, 255, 0, 0.1);
+            border-left: 4px solid #ffd700;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: var(--border-radius);
+        }
+
+        .warning-box {
+            background: rgba(255, 0, 0, 0.1);
+            border-left: 4px solid #ff0000;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: var(--border-radius);
+        }
     </style>
 </head>
 <body>
@@ -101,6 +117,9 @@
                 <div class="step-number">1</div>
                 <h2>Install Configuration Profile</h2>
                 <p>Download and install the configuration profile to enable app installation on your device.</p>
+                <div class="note-box">
+                    <p><strong>Note:</strong> This method works on iOS 17 and below. For iOS 18, you'll need to wait for a compatible version.</p>
+                </div>
                 <a href="#" class="download-button">
                     <i class="fas fa-download"></i> Download .mobileconfig
                 </a>
@@ -118,6 +137,9 @@
                     <li>Scroll down and tap on "VPN & Device Management"</li>
                     <li>Find the certificate and tap "Trust"</li>
                 </ol>
+                <div class="warning-box">
+                    <p><strong>Important:</strong> Make sure to trust the certificate in both the VPN & Device Management section and the Profile section.</p>
+                </div>
             </div>
         </section>
 
@@ -126,7 +148,13 @@
             <div class="step-card">
                 <div class="step-number">3</div>
                 <h2>Install eSign</h2>
-                <p>Download and install the eSign app to manage your IPA files.</p>
+                <p>Download and install the eSign app to manage your IPA files. eSign is a powerful tool that allows you to:</p>
+                <ul>
+                    <li>Install IPA files directly on your device</li>
+                    <li>Manage app certificates</li>
+                    <li>Resign apps when needed</li>
+                    <li>Install multiple apps at once</li>
+                </ul>
                 <a href="#" class="download-button">
                     <i class="fas fa-download"></i> Download eSign.ipa
                 </a>
@@ -145,6 +173,9 @@
                     <li>Select your IPA file from Files or Downloads</li>
                     <li>Wait for the installation to complete</li>
                 </ol>
+                <div class="note-box">
+                    <p><strong>Tip:</strong> You can install multiple IPA files at once by selecting them all before tapping the install button.</p>
+                </div>
                 <div class="screenshot-placeholder">
                     <i class="fas fa-image"></i> Screenshot placeholder
                 </div>
@@ -166,6 +197,10 @@
                 <h3 class="faq-question">Q: Is this method safe?</h3>
                 <p class="faq-answer">A: Yes, this method is safe as it uses official Apple systems. However, always download apps from trusted sources.</p>
             </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Q: Will this work on iOS 18?</h3>
+                <p class="faq-answer">A: Currently, this method is compatible with iOS 17 and below. For iOS 18, you'll need to wait for a compatible version.</p>
+            </div>
         </section>
 
         <!-- Navigation Buttons -->
@@ -185,6 +220,7 @@
             <div class="disclaimer-box">
                 <h3>Important Notice</h3>
                 <p>This guide is for educational purposes only. The methods described are unofficial and not endorsed by Apple. Use at your own risk.</p>
+                <p>Always ensure you're downloading apps from trusted sources and be aware of the potential risks involved in sideloading applications.</p>
             </div>
         </section>
     </main>
